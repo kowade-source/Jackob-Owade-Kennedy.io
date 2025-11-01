@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Owade Kennedy Jackob - Applied Mathematician</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #34495e;
+            --text-color: #333;
+            --text-light: #777;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .skill {
+            background-color: var(--light-color);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+        }
+
+        /* Summary Section */
+        .summary {
+            background-color: var(--light-color);
+        }
+
+        .summary-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .summary-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-content h3 {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .timeline-content h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .timeline-content ul {
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content li {
+            margin-bottom: 5px;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 4px solid var(--primary-color);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(odd)::after {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+
+        /* Publications Section */
+        .publications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .publication-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .publication-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .publication-info {
+            padding: 20px;
+        }
+
+        .publication-info h3 {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .publication-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .publication-year {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+
+        /* Education Section */
+        .education-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .education-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .education-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .education-item p {
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            gap: 50px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--light-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .contact-details h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .contact-details p {
+            color: var(--text-light);
+        }
+
+        .contact-form {
+            flex: 1;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .footer-about {
+            flex: 2;
+            margin-right: 50px;
+        }
+
+        .footer-about h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-about p {
+            color: #bbb;
+        }
+
+        .footer-links {
+            flex: 1;
+        }
+
+        .footer-links h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content, .contact-content {
+                flex-direction: column;
+            }
+
+            .about-img, .about-text, .contact-info, .contact-form {
+                flex: 1 1 100%;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item::after {
+                left: 21px;
+            }
+
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: 21px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 0;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                flex-direction: column;
+                background-color: white;
+                text-align: center;
+                transition: left 0.3s ease;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                padding: 20px 0;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .footer-about {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .publications-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Owade<span>Kennedy</span></a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#summary">Summary</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Dr. Owade Kennedy Jackob</h1>
+                <p>Applied Mathematician specializing in Mathematical Modeling, Differential Equations, and Epidemiology for Environmental Systems.</p>
+                <div class="hero-btns">
+                    <a href="#publications" class="btn">View My Research</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Dr. Owade Kennedy Jackob">
+                </div>
+                <div class="about-text">
+                    <h3>Applied Mathematician & Educator</h3>
+                    <p>I am a dedicated applied mathematician with expertise in mathematical modeling of environmental systems and epidemiology. My research focuses on using differential equations and dynamical systems to make predictions and inform policy decisions.</p>
+                    <p>I completed my PhD in Applied Mathematics at Masinde Muliro University of Science and Technology, where my thesis focused on developing mathematical models for cholera dynamics with vaccination and temperature-dependent parameters.</p>
+                    <div class="skills">
+                        <span class="skill">Mathematical Modeling</span>
+                        <span class="skill">Differential Equations</span>
+                        <span class="skill">Epidemiology</span>
+                        <span class="skill">MATLAB</span>
+                        <span class="skill">Python</span>
+                        <span class="skill">R</span>
+                        <span class="skill">LaTeX</span>
+                        <span class="skill">Numerical Analysis</span>
+                    </div>
+                    <a href="#contact" class="btn" style="margin-top: 20px;">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section class="summary" id="summary">
+        <div class="container">
+            <div class="section-title">
+                <h2>Academic Profile Summary</h2>
+            </div>
+            <div class="summary-content">
+                <p>Dr. Owade Kennedy Jackob is an accomplished applied mathematician with extensive experience in mathematical modeling of environmental systems and epidemiology. His research specializes in using differential equations and dynamical systems to analyze and predict disease dynamics, particularly cholera, with applications in public health policy.</p>
+                <p>With a PhD in Applied Mathematics from Masinde Muliro University of Science and Technology, Dr. Jackob has developed sophisticated mathematical models incorporating vaccination strategies and temperature-dependent parameters to understand cholera transmission dynamics.</p>
+                <p>He has significant teaching experience at multiple universities in Kenya, instructing courses in differential equations, mathematical modeling, numerical analysis, and engineering mathematics. His publication record demonstrates expertise in both theoretical and applied mathematics, with contributions to understanding disease dynamics and mathematical education.</p>
+                <p>Dr. Jackob is proficient in computational tools including MATLAB, Python, and R, and maintains professional memberships with the European Mathematical Society and Teachers Service Commission of Kenya.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Experience</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Part-time Lecturer of Mathematics</h3>
+                        <h4>Masinde Muliro University of Science and Technology</h4>
+                        <p><em>2016 - Present</em></p>
+                        <ul>
+                            <li>Teach and supervise undergraduate and postgraduate students</li>
+                            <li>Courses include: Ordinary Differential Equations, Mathematical Modeling, Partial Differential Equations, Vector Analysis, Engineering Mathematics</li>
+                            <li>Participate in setting, moderating, marking and analyzing examinations</li>
+                            <li>Supervise undergraduate students in Applied Mathematics projects</li>
+                            <li>Serve as academic advisor for B.Sc. and M.Sc. Mathematics students</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Part-time Lecturer of Mathematics</h3>
+                        <h4>Kaimosi Friends University</h4>
+                        <p><em>2019 - Present</em></p>
+                        <ul>
+                            <li>Teach undergraduate students in the department of Mathematics</li>
+                            <li>Courses include: Mathematical Modeling, Numerical Analysis, Complex Analysis, Operation Research</li>
+                            <li>Participate in setting, moderating, marking and analyzing examinations</li>
+                            <li>Supervise undergraduate students in Applied Mathematics projects</li>
+                            <li>Serve as academic advisor for B.Sc. Mathematics students</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Mathematics Teacher & Head of Department</h3>
+                        <h4>St. Francis Xavier Secondary School Shipalo</h4>
+                        <p><em>2017 - Present</em></p>
+                        <ul>
+                            <li>Teaching Mathematics and Physics</li>
+                            <li>Setting, moderating, marking and analyzing examinations</li>
+                            <li>Organizing and supervising laboratory practical lessons</li>
+                            <li>Offering guidance and counseling to students</li>
+                            <li>Head of Mathematics and Science Department</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Part-time Lecturer of Mathematics</h3>
+                        <h4>Kibabii University</h4>
+                        <p><em>2018 - 2020</em></p>
+                        <ul>
+                            <li>Taught undergraduate students in the department of Mathematics</li>
+                            <li>Courses included: Mathematical Modeling, Numerical Analysis, Complex Analysis, Vector Analysis</li>
+                            <li>Participated in setting, moderating, marking and analyzing examinations</li>
+                            <li>Supervised undergraduate students in Applied Mathematics projects</li>
+                            <li>Served as academic advisor for B.Sc. Mathematics students</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <div class="section-title">
+                <h2>Education</h2>
+            </div>
+            <div class="education-content">
+                <div class="education-item">
+                    <h3>Doctor of Philosophy in Applied Mathematics</h3>
+                    <h4>Masinde Muliro University of Science and Technology</h4>
+                    <p><em>February 2019 - December 2024</em></p>
+                    <p><strong>Thesis:</strong> Mathematical Model for Cholera Dynamics with Vaccination and Temperature-Dependent Parameters</p>
+                    <p><strong>Supervisors:</strong> Dr. Akinyi Colleta, Dr. Frankline Tireito</p>
+                </div>
+                <div class="education-item">
+                    <h3>Master of Science in Applied Mathematics</h3>
+                    <h4>Masinde Muliro University of Science and Technology</h4>
+                    <p><em>2015 - December 2018</em></p>
+                    <p><strong>Thesis:</strong> Modeling the Role of Rehydration and Antibiotic Treatment on Reduction of Cholera Mortality</p>
+                    <p><strong>Supervisors:</strong> Dr. Akinyi Colleta, Prof. George Lawi</p>
+                </div>
+                <div class="education-item">
+                    <h3>Bachelor of Education Science (Mathematics and Physics)</h3>
+                    <h4>Masinde Muliro University of Science and Technology</h4>
+                    <p><em>2010 - 2014</em></p>
+                    <p>Second Class Honours, Upper Division</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="publications" id="publications">
+        <div class="container">
+            <div class="section-title">
+                <h2>Publications</h2>
+            </div>
+            <div class="publications-grid">
+                <div class="publication-item">
+                    <div class="publication-info">
+                        <span class="publication-year">2024</span>
+                        <h3>A Between-Host Cholera Mathematical Model Incorporating Temperature Dependence</h3>
+                        <p>Owade, K. J., Okaka, A., & Tireito, F.</p>
+                        <p><em>African Journal of Empirical Research</em></p>
+                    </div>
+                </div>
+                <div class="publication-item">
+                    <div class="publication-info">
+                        <span class="publication-year">2023</span>
+                        <h3>A Mathematical Model on the Dynamics of In-Host Infection Cholera Disease with Vaccination</h3>
+                        <p>Owade Kennedy Jackob, Okaka Akinyi, & Frankline Tireito</p>
+                        <p><em>Discrete Dynamics in Nature and Society</em></p>
+                    </div>
+                </div>
+                <div class="publication-item">
+                    <div class="publication-info">
+                        <span class="publication-year">2020</span>
+                        <h3>Determination of the Equilibrium Point According to a Temporal Model of Rehydration in a Population with Cholera in Logistic Growth</h3>
+                        <p>Jackob, K. O.</p>
+                        <p><em>Journal of Advances in Mathematics and Computer Science</em></p>
+                    </div>
+                </div>
+                <div class="publication-item">
+                    <div class="publication-info">
+                        <span class="publication-year">2020</span>
+                        <h3>Mathematical Modeling and Analysis of Mathematics Anxiety Behavior on Mathematics Performance in Kenya</h3>
+                        <p>Nathan, O. M., & Jackob, K. O.</p>
+                        <p><em>Journal of Advances in Mathematics and Computer Science</em></p>
+                    </div>
+                </div>
+                <div class="publication-item">
+                    <div class="publication-info">
+                        <span class="publication-year">2019</span>
+                        <h3>Stability Analysis in a Mathematical Model of Corruption in Kenya</h3>
+                        <p>Nathan, O. M., & Jackob, K. O.</p>
+                        <p><em>Asian Research Journal of Mathematics</em></p>
+                    </div>
+                </div>
+                <div class="publication-item">
+                    <div class="publication-info">
+                        <span class="publication-year">2019</span>
+                        <h3>Modeling the Role of Rehydration and Antibiotic Treatment on Reduction of Cholera Mortality</h3>
+                        <p>Owade Kennedy Jackob, Akinyi Colleta, & Owutor George Lawi</p>
+                        <p><em>IOSR Journal of Mathematics</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Me</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>P.O. Box 190, 50100 Kakamega, Kenya</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>knowade@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+254726427459 / +254739554322</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-researchgate"></i></a>
+                        <a href="#"><i class="fab fa-google-scholar"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Dr. Owade Kennedy Jackob</h3>
+                    <p>Applied Mathematician specializing in Mathematical Modeling, Differential Equations, and Epidemiology for Environmental Systems.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#summary">Summary</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Dr. Owade Kennedy Jackob. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
