@@ -178,6 +178,23 @@
             color: var(--primary-color);
         }
 
+        /* Profile Photo */
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 30px;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         /* About Section */
         .about-content {
             display: flex;
@@ -247,6 +264,52 @@
             font-size: 1.1rem;
             margin-bottom: 20px;
             color: var(--text-light);
+        }
+
+        /* CV Download Section */
+        .cv-download {
+            background: linear-gradient(135deg, var(--secondary-color), var(--dark-color));
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .cv-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cv-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cv-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cv-btn {
+            background-color: white;
+            color: var(--secondary-color);
+            font-weight: 600;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .cv-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
         /* Experience Section */
@@ -665,6 +728,7 @@
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#publications">Publications</a></li>
+                    <li><a href="#cv">CV</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="menu-toggle">
@@ -678,11 +742,15 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
+                <!-- Your Profile Photo -->
+                <div class="profile-photo">
+                    <img src="3.jpg" alt="Dr. Owade Kennedy Jackob">
+                </div>
                 <h1>Dr. Owade Kennedy Jackob</h1>
                 <p>Applied Mathematician specializing in Mathematical Modeling, Differential Equations, and Epidemiology for Environmental Systems.</p>
                 <div class="hero-btns">
                     <a href="#publications" class="btn">View My Research</a>
-                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    <a href="#cv" class="btn btn-outline">Download CV</a>
                 </div>
             </div>
         </div>
@@ -696,8 +764,8 @@
             </div>
             <div class="about-content">
                 <div class="about-img">
-                <img src="3.jpg" alt="Dr. Owade Kennedy Jackob">
-            </div>
+                    <img src="3.jpg" alt="Dr. Owade Kennedy Jackob">
+                </div>
                 <div class="about-text">
                     <h3>Applied Mathematician & Educator</h3>
                     <p>I am a dedicated applied mathematician with expertise in mathematical modeling of environmental systems and epidemiology. My research focuses on using differential equations and dynamical systems to make predictions and inform policy decisions.</p>
@@ -712,7 +780,7 @@
                         <span class="skill">LaTeX</span>
                         <span class="skill">Numerical Analysis</span>
                     </div>
-                    <a href="#contact" class="btn" style="margin-top: 20px;">Contact Me</a>
+                    <a href="#cv" class="btn" style="margin-top: 20px;">Download CV</a>
                 </div>
             </div>
         </div>
@@ -729,6 +797,20 @@
                 <p>With a PhD in Applied Mathematics from Masinde Muliro University of Science and Technology, Dr. Jackob has developed sophisticated mathematical models incorporating vaccination strategies and temperature-dependent parameters to understand cholera transmission dynamics.</p>
                 <p>He has significant teaching experience at multiple universities in Kenya, instructing courses in differential equations, mathematical modeling, numerical analysis, and engineering mathematics. His publication record demonstrates expertise in both theoretical and applied mathematics, with contributions to understanding disease dynamics and mathematical education.</p>
                 <p>Dr. Jackob is proficient in computational tools including MATLAB, Python, and R, and maintains professional memberships with the European Mathematical Society and Teachers Service Commission of Kenya.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Download Section -->
+    <section class="cv-download" id="cv">
+        <div class="container">
+            <div class="cv-content">
+                <h2>Curriculum Vitae</h2>
+                <p>Download my complete CV for detailed information about my education, research, publications, teaching experience, and professional background.</p>
+                <a href="OWADE_NEW_CV.pdf" class="cv-btn" download>
+                    <i class="fas fa-download"></i>
+                    Download CV (PDF)
+                </a>
             </div>
         </div>
     </section>
@@ -970,6 +1052,7 @@
                         <li><a href="#experience">Experience</a></li>
                         <li><a href="#education">Education</a></li>
                         <li><a href="#publications">Publications</a></li>
+                        <li><a href="#cv">CV</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -1023,4 +1106,3 @@
     </script>
 </body>
 </html>
-
