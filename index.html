@@ -404,6 +404,8 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .publication-item:hover {
@@ -412,6 +414,7 @@
 
         .publication-info {
             padding: 20px;
+            flex-grow: 1;
         }
 
         .publication-info h3 {
@@ -432,6 +435,23 @@
             padding: 5px 10px;
             border-radius: 5px;
             font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        .publication-link {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .publication-link:hover {
+            background-color: var(--primary-color);
         }
 
         /* Education Section */
@@ -937,6 +957,7 @@
                         <h3>A Between-Host Cholera Mathematical Model Incorporating Temperature Dependence</h3>
                         <p>Owade, K. J., Okaka, A., & Tireito, F.</p>
                         <p><em>African Journal of Empirical Research</em></p>
+                        <a href="https://example.com/paper1" class="publication-link" target="_blank">Read Paper</a>
                     </div>
                 </div>
                 <div class="publication-item">
@@ -945,6 +966,7 @@
                         <h3>A Mathematical Model on the Dynamics of In-Host Infection Cholera Disease with Vaccination</h3>
                         <p>Owade Kennedy Jackob, Okaka Akinyi, & Frankline Tireito</p>
                         <p><em>Discrete Dynamics in Nature and Society</em></p>
+                        <a href="https://example.com/paper2" class="publication-link" target="_blank">Read Paper</a>
                     </div>
                 </div>
                 <div class="publication-item">
@@ -953,6 +975,7 @@
                         <h3>Determination of the Equilibrium Point According to a Temporal Model of Rehydration in a Population with Cholera in Logistic Growth</h3>
                         <p>Jackob, K. O.</p>
                         <p><em>Journal of Advances in Mathematics and Computer Science</em></p>
+                        <a href="https://example.com/paper3" class="publication-link" target="_blank">Read Paper</a>
                     </div>
                 </div>
                 <div class="publication-item">
@@ -961,6 +984,7 @@
                         <h3>Mathematical Modeling and Analysis of Mathematics Anxiety Behavior on Mathematics Performance in Kenya</h3>
                         <p>Nathan, O. M., & Jackob, K. O.</p>
                         <p><em>Journal of Advances in Mathematics and Computer Science</em></p>
+                        <a href="https://example.com/paper4" class="publication-link" target="_blank">Read Paper</a>
                     </div>
                 </div>
                 <div class="publication-item">
@@ -969,6 +993,7 @@
                         <h3>Stability Analysis in a Mathematical Model of Corruption in Kenya</h3>
                         <p>Nathan, O. M., & Jackob, K. O.</p>
                         <p><em>Asian Research Journal of Mathematics</em></p>
+                        <a href="https://example.com/paper5" class="publication-link" target="_blank">Read Paper</a>
                     </div>
                 </div>
                 <div class="publication-item">
@@ -977,6 +1002,7 @@
                         <h3>Modeling the Role of Rehydration and Antibiotic Treatment on Reduction of Cholera Mortality</h3>
                         <p>Owade Kennedy Jackob, Akinyi Colleta, & Owutor George Lawi</p>
                         <p><em>IOSR Journal of Mathematics</em></p>
+                        <a href="https://example.com/paper6" class="publication-link" target="_blank">Read Paper</a>
                     </div>
                 </div>
             </div>
