@@ -471,7 +471,7 @@
         /* Publications Section */
         .publications-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 30px;
         }
 
@@ -567,6 +567,31 @@
             margin-bottom: 10px;
         }
 
+        /* Research Supervision Section */
+        .supervision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .supervision-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .supervision-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .supervision-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
         /* Contact Section */
         .contact-content {
             display: flex;
@@ -636,14 +661,6 @@
         textarea.form-control {
             min-height: 150px;
             resize: vertical;
-        }
-
-        /* Image Upload Hint */
-        .image-hint {
-            font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.7);
-            margin-top: 10px;
-            text-align: center;
         }
 
         /* Footer */
@@ -827,7 +844,7 @@
                 font-size: 1.8rem;
             }
 
-            .publications-grid {
+            .publications-grid, .supervision-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -845,6 +862,7 @@
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#publications">Publications</a></li>
+                    <li><a href="#supervision">Supervision</a></li>
                     <li><a href="#cv">CV</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -862,7 +880,7 @@
                     <i class="fas fa-user-circle placeholder-icon"></i>
                 </div>
                 <h1>Dr. Owade Kennedy Jackob</h1>
-                <p>Applied Mathematician | Lecturer | Researcher in Dynamical Systems, Optimization & Mathematical Epidemiology</p>
+                <p>Applied Mathematician | Lecturer | Researcher in Convex Analysis, Dynamical Systems & Mathematical Epidemiology</p>
                 <div class="hero-btns">
                     <a href="#publications" class="btn">View My Research</a>
                     <a href="#cv" class="btn btn-outline">Download CV</a>
@@ -883,7 +901,7 @@
                 <div class="about-text">
                     <h3>Applied Mathematician, Educator & Researcher</h3>
                     <p>I am a dedicated applied mathematician with a PhD from Masinde Muliro University of Science and Technology. My research spans convex and nonsmooth analysis, monotone operator theory, fractional-order dynamical systems, and mathematical epidemiology. Currently, I serve as Lecturer at UMMA University and continue part-time teaching at MMUST and Kaimosi Friends University.</p>
-                    <p>My work integrates operator-based formulations, nonsmooth analysis, and convex optimization to address complex challenges in infectious disease modeling, resource allocation, and climate resilience. I actively supervise MSc students in applied mathematics and have published in leading journals.</p>
+                    <p>My work integrates operator-based formulations, nonsmooth analysis, and convex optimization to address complex challenges in infectious disease modeling, resource allocation, and climate resilience. I actively supervise MSc students in applied mathematics and have published in leading journals including Wiley, Elsevier, and Discrete Dynamics in Nature and Society.</p>
                     <div class="skills">
                         <span class="skill">Convex/Nonsmooth Analysis</span>
                         <span class="skill">Monotone Operator Theory</span>
@@ -894,7 +912,7 @@
                         <span class="skill">Proximal Algorithms</span>
                         <span class="skill">LaTeX</span>
                     </div>
-                    <a href="#cv" class="btn" style="margin-top: 20px;">Full CV</a>
+                    <a href="#cv" class="btn" style="margin-top: 20px;">Download Full CV</a>
                 </div>
             </div>
         </div>
@@ -907,8 +925,8 @@
             </div>
             <div class="summary-content">
                 <p>Dr. Owade Kennedy Jackob is an accomplished applied mathematician with expertise in convex and nonsmooth analysis, monotone operator theory, fractional-order dynamical systems, and optimal control. His doctoral thesis developed a temperature-dependent fractional-order cholera model with vaccination, utilizing fixed-point theorems and operator theory.</p>
-                <p>Currently a Lecturer at UMMA University and Examination Coordinator, he has extensive teaching experience in differential equations, mathematical modeling, numerical analysis, and optimization. His research includes a multiscale HIV/AIDS model quantifying community health promoter impact, submitted to Results in Control and Optimization (Elsevier).</p>
-                <p>Dr. Jackob holds professional memberships with the European Mathematical Society and the Teachers Service Commission, Kenya. He has received multiple Certificates of Excellence in Reviewing from Wiley, Elsevier, and other publishers. He supervises MSc research in PDE-constrained problems and AI-driven flood prediction.</p>
+                <p>Currently a Lecturer at UMMA University and Examination Coordinator, he has extensive teaching experience in differential equations, mathematical modeling, numerical analysis, and optimization. His current research includes a multiscale HIV/AIDS model quantifying community health promoter impact, which has been revised and resubmitted to Results in Control and Optimization (Elsevier).</p>
+                <p>Dr. Jackob holds professional memberships with the European Mathematical Society (2024-Present) and the Teachers Service Commission, Kenya (2017-2026). He has received multiple Certificates of Excellence in Reviewing from Wiley, Elsevier, and other publishers. He supervises MSc research in PDE-constrained problems (microplastic pollutants) and AI-driven flood prediction for climate resilience.</p>
             </div>
         </div>
     </section>
@@ -918,7 +936,7 @@
             <div class="cv-content">
                 <h2>Curriculum Vitae</h2>
                 <p>Download my complete CV for detailed information about education, research, publications, teaching experience, and professional background (updated March 2026).</p>
-                <a href="OWADE_NEW_CV.pdf" class="cv-btn" download>
+                <a href="JACKOB_CV.pdf" class="cv-btn" download>
                     <i class="fas fa-download"></i>
                     Download CV (PDF)
                 </a>
@@ -946,9 +964,10 @@
                 <h2>Education</h2>
             </div>
             <div class="education-content">
-                <div class="education-item"><h3>Doctor of Philosophy in Applied Mathematics</h3><h4>Masinde Muliro University of Science and Technology</h4><p><em>Feb 2019 - Dec 2024</em></p><p><strong>Thesis:</strong> Mathematical Model for Cholera Dynamics with Vaccination and Temperature-Dependent Parameters</p><p><strong>Supervisors:</strong> Dr. Akinyi Colleta, Dr. Frankline Tireito</p><p><strong>Focus:</strong> Fractional-order dynamical systems, operator theory, nonsmooth analysis, existence/uniqueness proofs.</p></div>
-                <div class="education-item"><h3>Master of Science in Applied Mathematics</h3><h4>Masinde Muliro University of Science and Technology</h4><p><em>2015 - Dec 2018</em></p><p><strong>Thesis:</strong> Modeling the Role of Rehydration and Antibiotic Treatment on Reduction of Cholera Mortality</p><p><strong>Supervisors:</strong> Dr. Akinyi Colleta, Prof. George Lawi</p></div>
+                <div class="education-item"><h3>Doctor of Philosophy in Applied Mathematics</h3><h4>Masinde Muliro University of Science and Technology</h4><p><em>Feb 2019 - Dec 2024</em></p><p><strong>Thesis:</strong> Mathematical Model for Cholera Dynamics with Vaccination and Temperature-Dependent Parameters</p><p><strong>Supervisors:</strong> Dr. Akinyi Colleta, Dr. Frankline Tireito</p><p><strong>Focus:</strong> Fractional-order dynamical systems, operator theory, nonsmooth analysis, existence/uniqueness proofs using fixed-point theorems.</p></div>
+                <div class="education-item"><h3>Master of Science in Applied Mathematics</h3><h4>Masinde Muliro University of Science and Technology</h4><p><em>2015 - Dec 2018</em></p><p><strong>Thesis:</strong> Modeling the Role of Rehydration and Antibiotic Treatment on Reduction of Cholera Mortality</p><p><strong>Supervisors:</strong> Dr. Akinyi Colleta, Prof. George Lawi</p><p><strong>Focus:</strong> ODE systems, Lyapunov stability, equilibrium analysis.</p></div>
                 <div class="education-item"><h3>Bachelor of Education Science (Mathematics and Physics)</h3><h4>Masinde Muliro University of Science and Technology</h4><p><em>2010 - 2014</em></p><p>Second Class Honours, Upper Division</p></div>
+                <div class="education-item"><h3>Professional Training</h3><h4>OPSWAT Academy</h4><p><em>2026</em></p><p>Cyber Security Fundamentals Associate & Network Security Associate</p></div>
             </div>
         </div>
     </section>
@@ -960,12 +979,36 @@
             </div>
             <div class="publications-grid">
                 <div class="publication-item"><div class="publication-info"><span class="publication-year">2025</span><h3>Dynamics of the Fractional-Order Between-Host Cholera Model With Temperature-Dependence</h3><p>Owade Kennedy Jackob & Colletta Akinyi</p><p><em>Abstract and Applied Analysis, Wiley</em></p><a href="https://onlinelibrary.wiley.com/doi/10.1155/aaa/2312040" class="publication-link" target="_blank">View Article</a></div></div>
-                <div class="publication-item"><div class="publication-info"><span class="publication-year">2024</span><h3>A Between-Host Cholera Mathematical Model Incorporating Temperature Dependence</h3><p>Owade, K. J., Okaka, A., & Tireito, F.</p><p><em>African Journal of Empirical Research, 5(3)</em></p><a href="#" class="publication-link">Read</a></div></div>
-                <div class="publication-item"><div class="publication-info"><span class="publication-year">2023</span><h3>A Mathematical Model on the Dynamics of In-Host Infection Cholera Disease with Vaccination</h3><p>Owade, Okaka, & Tireito</p><p><em>Discrete Dynamics in Nature and Society</em></p><a href="https://onlinelibrary.wiley.com/doi/10.1155/2023/1465228" class="publication-link" target="_blank">View Article</a></div></div>
-                <div class="publication-item"><div class="publication-info"><span class="publication-year">2020</span><h3>Mathematical Modeling and Analysis of Mathematics Anxiety Behavior on Mathematics Performance in Kenya</h3><p>Nathan, O. M., & Jackob, K. O.</p><p><em>Journal of Advances in Mathematics and Computer Science</em></p></div></div>
-                <div class="publication-item"><div class="publication-info"><span class="publication-year">2019</span><h3>Stability Analysis in a Mathematical Model of Corruption in Kenya</h3><p>Nathan, O. M., & Jackob, K. O.</p><p><em>Asian Research Journal of Mathematics</em></p></div></div>
-                <div class="publication-item"><div class="publication-info"><span class="publication-year">2019</span><h3>Modeling the Role of Rehydration and Antibiotic Treatment on Reduction of Cholera Mortality</h3><p>Owade, Colleta, & Lawi</p><p><em>IOSR Journal of Mathematics</em></p></div></div>
-                <div class="publication-item"><div class="publication-info"><span class="publication-year">In Progress</span><h3>Multiscale Mathematical Analysis of HIV/AIDS Dynamics: Quantifying the Impact of Community Health Promoters</h3><p>Owade, K. J.</p><p><em>Revised Manuscript Submitted: Elsevier Journal of Results in Control and Optimization (RICO)</em></p></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">2024</span><h3>A Between-Host Cholera Mathematical Model Incorporating Temperature Dependence</h3><p>Owade, K. J., Okaka, A., & Tireito, F.</p><p><em>African Journal of Empirical Research, 5(3)</em></p></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">2023</span><h3>A Mathematical Model on the Dynamics of In-Host Infection Cholera Disease with Vaccination</h3><p>Owade Kennedy Jackob, Okaka Akinyi, & Frankline Tireito</p><p><em>Discrete Dynamics in Nature and Society</em></p><a href="https://onlinelibrary.wiley.com/doi/10.1155/2023/1465228" class="publication-link" target="_blank">View Article</a></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">2020</span><h3>Determination of the Equilibrium Point According to a Temporal Model of Rehydration in a Population with Cholera in Logistic Growth</h3><p>Jackob, K. O.</p><p><em>Journal of Advances in Mathematics and Computer Science, 35(4), 1-12</em></p></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">2020</span><h3>Mathematical Modeling and Analysis of Mathematics Anxiety Behavior on Mathematics Performance in Kenya</h3><p>Nathan, O. M., & Jackob, K. O.</p><p><em>Journal of Advances in Mathematics and Computer Science, 35(5), 45-58</em></p></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">2019</span><h3>Stability Analysis in a Mathematical Model of Corruption in Kenya</h3><p>Nathan, O. M., & Jackob, K. O.</p><p><em>Asian Research Journal of Mathematics, 15(2), 1-11</em></p></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">2019</span><h3>Modeling the Role of Rehydration and Antibiotic Treatment on Reduction of Cholera Mortality</h3><p>Owade Kennedy Jackob, Akinyi Colleta, & Owuor George Lawi</p><p><em>IOSR Journal of Mathematics, 15(6), 38-48</em></p></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">Under Review</span><h3>Multiscale Mathematical Analysis of HIV/AIDS Dynamics: Quantifying the Impact of Community Health Promoters on Epidemic Control</h3><p>Owade, K. J.</p><p><em>Elsevier Journal of Results in Control and Optimization (RICO) - Revised Manuscript Submitted</em></p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="publications" id="supervision">
+        <div class="container">
+            <div class="section-title">
+                <h2>Research Supervision</h2>
+            </div>
+            <div class="supervision-grid">
+                <div class="supervision-item">
+                    <h4>MSc Supervisor (2025-Present)</h4>
+                    <p><strong>Student:</strong> Nicholas Okuku Alele</p>
+                    <p><strong>Thesis:</strong> Modeling the Spread of Microplastic Pollutants in Aquatic Systems Using Advection-Diffusion Equation</p>
+                    <p><strong>Relevance:</strong> PDE-constrained problems, operator splitting methods, numerical analysis</p>
+                </div>
+                <div class="supervision-item">
+                    <h4>MSc Supervisor (2025-Present)</h4>
+                    <p><strong>Student:</strong> Caleb Ariko</p>
+                    <p><strong>Thesis:</strong> An AI-Driven Model for High-Resolution Flood Prediction for Enhancing Climate Resilience in Kenya</p>
+                    <p><strong>Relevance:</strong> Optimization algorithms, training dynamics, nonsmooth problems, machine learning</p>
+                    <p><em>Commonwealth Shared Scholarship 2026/27 - CSC Reference: 11064219-CSS-KE-26</em></p>
+                </div>
             </div>
         </div>
     </section>
@@ -980,7 +1023,13 @@
                     <div class="contact-item"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div class="contact-details"><h3>Location</h3><p>Kajiado / Kakamega, Kenya</p></div></div>
                     <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div class="contact-details"><h3>Email</h3><p>knowade@gmail.com</p></div></div>
                     <div class="contact-item"><div class="contact-icon"><i class="fas fa-phone"></i></div><div class="contact-details"><h3>Phone</h3><p>+254726427459 / +254739554322</p></div></div>
-                    <div class="social-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-researchgate"></i></a><a href="#"><i class="fab fa-google-scholar"></i></a></div>
+                    <div class="contact-item"><div class="contact-icon"><i class="fab fa-orcid"></i></div><div class="contact-details"><h3>ORCID</h3><p>0000-0003-2931-5914</p></div></div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-researchgate"></i></a>
+                        <a href="#"><i class="fab fa-google-scholar"></i></a>
+                    </div>
                 </div>
                 <div class="contact-form">
                     <form id="contactForm">
@@ -997,8 +1046,25 @@
 
     <footer>
         <div class="container">
-            <div class="footer-content"><div class="footer-about"><h3>Dr. Owade Kennedy Jackob</h3><p>Applied Mathematician specializing in convex/nonsmooth analysis, dynamical systems, and mathematical epidemiology.</p></div><div class="footer-links"><h3>Quick Links</h3><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#publications">Publications</a></li><li><a href="#cv">CV</a></li></ul></div></div>
-            <div class="copyright"><p>&copy; 2026 Dr. Owade Kennedy Jackob. All Rights Reserved. Updated from CV March 2026.</p></div>
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Dr. Owade Kennedy Jackob</h3>
+                    <p>Applied Mathematician specializing in convex/nonsmooth analysis, monotone operator theory, dynamical systems, and mathematical epidemiology.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#cv">CV</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Dr. Owade Kennedy Jackob. All Rights Reserved. Last updated March 2026.</p>
+            </div>
         </div>
     </footer>
 
@@ -1006,38 +1072,74 @@
         // Mobile Menu Toggle
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
-        menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
-        document.querySelectorAll('.nav-links a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('active'); }); });
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+        }
+        document.querySelectorAll('.nav-links a').forEach(link => { 
+            link.addEventListener('click', () => { navLinks.classList.remove('active'); });
+        });
         
         // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) { e.preventDefault(); alert('Thank you for your message! I will respond promptly.'); this.reset(); });
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) { 
+                e.preventDefault(); 
+                alert('Thank you for your message! I will respond promptly.'); 
+                this.reset(); 
+            });
+        }
         
         // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { e.preventDefault(); const targetId = this.getAttribute('href'); if(targetId === '#') return; const targetElement = document.querySelector(targetId); if(targetElement) { window.scrollTo({ top: targetElement.offsetTop - 80, behavior: 'smooth' }); } }); });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => { 
+            anchor.addEventListener('click', function(e) { 
+                e.preventDefault(); 
+                const targetId = this.getAttribute('href'); 
+                if(targetId === '#') return; 
+                const targetElement = document.querySelector(targetId); 
+                if(targetElement) { 
+                    window.scrollTo({ top: targetElement.offsetTop - 80, behavior: 'smooth' }); 
+                } 
+            }); 
+        });
         
         // Animation observer
         const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } }); }, observerOptions);
-        document.querySelectorAll('.about-content, .summary-content, .timeline-item, .education-item, .publication-item, .contact-content').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(20px)'; el.style.transition = 'opacity 0.5s ease, transform 0.5s ease'; observer.observe(el); });
+        const observer = new IntersectionObserver((entries) => { 
+            entries.forEach(entry => { 
+                if (entry.isIntersecting) { 
+                    entry.target.style.opacity = '1'; 
+                    entry.target.style.transform = 'translateY(0)'; 
+                } 
+            }); 
+        }, observerOptions);
         
-        // Function to load profile image - save your photo as "profile.jpg" in the same folder
+        document.querySelectorAll('.about-content, .summary-content, .timeline-item, .education-item, .publication-item, .supervision-item, .contact-content').forEach(el => { 
+            el.style.opacity = '0'; 
+            el.style.transform = 'translateY(20px)'; 
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease'; 
+            observer.observe(el); 
+        });
+        
+        // Function to load profile image
         function loadProfileImage() {
             const profilePhoto = document.getElementById('profilePhoto');
             const aboutImage = document.getElementById('aboutImage');
             const img = new Image();
             img.onload = function() {
-                // Replace placeholder with actual image
-                profilePhoto.innerHTML = '';
-                const imgElement = document.createElement('img');
-                imgElement.src = 'profile.jpg';
-                imgElement.alt = 'Dr. Owade Kennedy Jackob';
-                profilePhoto.appendChild(imgElement);
-                
-                aboutImage.innerHTML = '';
-                const aboutImgElement = document.createElement('img');
-                aboutImgElement.src = 'profile.jpg';
-                aboutImgElement.alt = 'Dr. Owade Kennedy Jackob';
-                aboutImage.appendChild(aboutImgElement);
+                if (profilePhoto) {
+                    profilePhoto.innerHTML = '';
+                    const imgElement = document.createElement('img');
+                    imgElement.src = 'profile.jpg';
+                    imgElement.alt = 'Dr. Owade Kennedy Jackob';
+                    profilePhoto.appendChild(imgElement);
+                }
+                if (aboutImage) {
+                    aboutImage.innerHTML = '';
+                    const aboutImgElement = document.createElement('img');
+                    aboutImgElement.src = 'profile.jpg';
+                    aboutImgElement.alt = 'Dr. Owade Kennedy Jackob';
+                    aboutImage.appendChild(aboutImgElement);
+                }
             };
             img.onerror = function() {
                 console.log('Profile image not found. Please add a photo named "profile.jpg" to display your picture.');
@@ -1045,7 +1147,6 @@
             img.src = 'profile.jpg';
         }
         
-        // Try to load profile image
         loadProfileImage();
     </script>
 </body>
