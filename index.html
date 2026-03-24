@@ -228,16 +228,22 @@
             border: 5px solid white;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             transition: transform 0.5s ease;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #555;
         }
 
         .profile-photo:hover {
             transform: scale(1.05);
         }
 
-        .profile-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .profile-photo i {
+            font-size: 5rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         /* About Section */
@@ -252,17 +258,17 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background: #eef2f5;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .about-img img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-
-        .about-img:hover img {
-            transform: scale(1.05);
+        .about-img i {
+            font-size: 8rem;
+            color: var(--primary-color);
+            opacity: 0.7;
         }
 
         .about-text {
@@ -475,12 +481,13 @@
         .publication-info h3 {
             margin-bottom: 10px;
             color: var(--secondary-color);
+            font-size: 1rem;
         }
 
         .publication-info p {
             color: var(--text-light);
             font-size: 0.9rem;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .publication-year {
@@ -802,7 +809,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
             <nav class="navbar">
@@ -824,16 +830,14 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <!-- Your Profile Photo -->
                 <div class="profile-photo">
-                    <img src="3.jpg" alt="Dr. Owade Kennedy Jackob">
+                    <i class="fas fa-user-circle"></i>
                 </div>
                 <h1>Dr. Owade Kennedy Jackob</h1>
-                <p>Applied Mathematician specializing in Mathematical Modeling, Differential Equations, and Epidemiology for Environmental Systems.</p>
+                <p>Applied Mathematician | Lecturer | Researcher in Dynamical Systems, Optimization & Mathematical Epidemiology</p>
                 <div class="hero-btns">
                     <a href="#publications" class="btn">View My Research</a>
                     <a href="#cv" class="btn btn-outline">Download CV</a>
@@ -842,7 +846,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
             <div class="section-title">
@@ -850,50 +853,46 @@
             </div>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="3.jpg" alt="Dr. Owade Kennedy Jackob">
+                    <i class="fas fa-chalkboard-teacher"></i>
                 </div>
                 <div class="about-text">
-                    <h3>Applied Mathematician & Educator</h3>
-                    <p>I am a dedicated applied mathematician with expertise in mathematical modeling of environmental systems and epidemiology. My research focuses on using differential equations and dynamical systems to make predictions and inform policy decisions.</p>
-                    <p>I completed my PhD in Applied Mathematics at Masinde Muliro University of Science and Technology, where my thesis focused on developing mathematical models for cholera dynamics with vaccination and temperature-dependent parameters.</p>
+                    <h3>Applied Mathematician, Educator & Researcher</h3>
+                    <p>I am a dedicated applied mathematician with a PhD from Masinde Muliro University of Science and Technology. My research spans convex and nonsmooth analysis, monotone operator theory, fractional-order dynamical systems, and mathematical epidemiology. Currently, I serve as Lecturer at UMMA University and continue part-time teaching at MMUST and Kaimosi Friends University.</p>
+                    <p>My work integrates operator-based formulations, nonsmooth analysis, and convex optimization to address complex challenges in infectious disease modeling, resource allocation, and climate resilience. I actively supervise MSc students in applied mathematics and have published in leading journals.</p>
                     <div class="skills">
-                        <span class="skill">Mathematical Modeling</span>
-                        <span class="skill">Differential Equations</span>
-                        <span class="skill">Epidemiology</span>
-                        <span class="skill">Data Analysis</span>
-                        <span class="skill">MATLAB</span>
-                        <span class="skill">Python</span>
-                        <span class="skill">R</span>
+                        <span class="skill">Convex/Nonsmooth Analysis</span>
+                        <span class="skill">Monotone Operator Theory</span>
+                        <span class="skill">Fractional Dynamical Systems</span>
+                        <span class="skill">KKT Conditions</span>
+                        <span class="skill">MATLAB/Python/R</span>
+                        <span class="skill">Mathematical Epidemiology</span>
+                        <span class="skill">Proximal Algorithms</span>
                         <span class="skill">LaTeX</span>
-                        <span class="skill">Numerical Analysis</span>
                     </div>
-                    <a href="#cv" class="btn" style="margin-top: 20px;">Download CV</a>
+                    <a href="#cv" class="btn" style="margin-top: 20px;">Full CV</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Summary Section -->
     <section class="summary" id="summary">
         <div class="container">
             <div class="section-title">
                 <h2>Academic Profile Summary</h2>
             </div>
             <div class="summary-content">
-                <p>Dr. Owade Kennedy Jackob is an accomplished applied mathematician with extensive experience in mathematical modeling of environmental systems and epidemiology. His research specializes in using differential equations and dynamical systems to analyze and predict disease dynamics, particularly cholera, with applications in public health policy.</p>
-                <p>With a PhD in Applied Mathematics from Masinde Muliro University of Science and Technology, Dr. Jackob has developed sophisticated mathematical models incorporating vaccination strategies and temperature-dependent parameters to understand cholera transmission dynamics.</p>
-                <p>He has significant teaching experience at multiple universities in Kenya, instructing courses in differential equations, mathematical modeling, numerical analysis, and engineering mathematics. His publication record demonstrates expertise in both theoretical and applied mathematics, with contributions to understanding disease dynamics and mathematical education.</p>
-                <p>Dr. Jackob is proficient in computational tools including MATLAB, Python, and R, and maintains professional memberships with the European Mathematical Society and Teachers Service Commission of Kenya.</p>
+                <p>Dr. Owade Kennedy Jackob is an accomplished applied mathematician with expertise in convex and nonsmooth analysis, monotone operator theory, fractional-order dynamical systems, and optimal control. His doctoral thesis developed a temperature-dependent fractional-order cholera model with vaccination, utilizing fixed-point theorems and operator theory.</p>
+                <p>Currently a Lecturer at UMMA University and Examination Coordinator, he has extensive teaching experience in differential equations, mathematical modeling, numerical analysis, and optimization. His research includes a multiscale HIV/AIDS model quantifying community health promoter impact, submitted to Results in Control and Optimization (Elsevier).</p>
+                <p>Dr. Jackob holds professional memberships with the European Mathematical Society and the Teachers Service Commission, Kenya. He has received multiple Certificates of Excellence in Reviewing from Wiley, Elsevier, and other publishers. He supervises MSc research in PDE-constrained problems and AI-driven flood prediction.</p>
             </div>
         </div>
     </section>
 
-    <!-- CV Download Section -->
     <section class="cv-download" id="cv">
         <div class="container">
             <div class="cv-content">
                 <h2>Curriculum Vitae</h2>
-                <p>Download my complete CV for detailed information about my education, research, publications, teaching experience, and professional background.</p>
+                <p>Download my complete CV for detailed information about education, research, publications, teaching experience, and professional background (updated March 2026).</p>
                 <a href="OWADE_NEW_CV.pdf" class="cv-btn" download>
                     <i class="fas fa-download"></i>
                     Download CV (PDF)
@@ -902,180 +901,50 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section class="experience" id="experience">
         <div class="container">
             <div class="section-title">
                 <h2>Professional Experience</h2>
             </div>
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Part-time Lecturer of Mathematics</h3>
-                        <h4>Masinde Muliro University of Science and Technology</h4>
-                        <p><em>2016 - Present</em></p>
-                        <ul>
-                            <li>Teach and supervise undergraduate and postgraduate students</li>
-                            <li>Courses include: Ordinary Differential Equations, Mathematical Modeling, Partial Differential Equations, Vector Analysis, Engineering Mathematics</li>
-                            <li>Participate in setting, moderating, marking and analyzing examinations</li>
-                            <li>Supervise undergraduate students in Applied Mathematics projects</li>
-                            <li>Serve as academic advisor for B.Sc. and M.Sc. Mathematics students</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Part-time Lecturer of Mathematics</h3>
-                        <h4>Kaimosi Friends University</h4>
-                        <p><em>2019 - Present</em></p>
-                        <ul>
-                            <li>Teach undergraduate students in the department of Mathematics</li>
-                            <li>Courses include: Mathematical Modeling, Numerical Analysis, Complex Analysis, Operation Research</li>
-                            <li>Participate in setting, moderating, marking and analyzing examinations</li>
-                            <li>Supervise undergraduate students in Applied Mathematics projects</li>
-                            <li>Serve as academic advisor for B.Sc. Mathematics students</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Mathematics Teacher & Head of Department</h3>
-                        <h4>St. Francis Xavier Secondary School Shipalo</h4>
-                        <p><em>2017 - Present</em></p>
-                        <ul>
-                            <li>Teaching Mathematics and Physics</li>
-                            <li>Setting, moderating, marking and analyzing examinations</li>
-                            <li>Organizing and supervising laboratory practical lessons</li>
-                            <li>Offering guidance and counseling to students</li>
-                            <li>Head of Mathematics and Science Department</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Part-time Lecturer of Mathematics</h3>
-                        <h4>Kibabii University</h4>
-                        <p><em>2018 - 2020</em></p>
-                        <ul>
-                            <li>Taught undergraduate students in the department of Mathematics</li>
-                            <li>Courses included: Mathematical Modeling, Numerical Analysis, Complex Analysis, Vector Analysis</li>
-                            <li>Participated in setting, moderating, marking and analyzing examinations</li>
-                            <li>Supervised undergraduate students in Applied Mathematics projects</li>
-                            <li>Served as academic advisor for B.Sc. Mathematics students</li>
-                        </ul>
-                    </div>
-                </div>
+                <div class="timeline-item"><div class="timeline-content"><h3>Lecturer & Examination Coordinator</h3><h4>UMMA University, School of Education, Kajiado, Kenya</h4><p><em>2026 - Present</em></p><ul><li>Teach and supervise undergraduate and postgraduate students</li><li>Curriculum review for Bachelor of Education Science courses</li><li>Examination Coordinator, Department of Education Science</li><li>Contribute to university research agenda in applied mathematics</li></ul></div></div>
+                <div class="timeline-item"><div class="timeline-content"><h3>Part-time Lecturer</h3><h4>Masinde Muliro University of Science and Technology</h4><p><em>2016 - Present</em></p><ul><li>Teach undergraduate and graduate courses (ODE, PDE, Mathematical Modeling, Numerical Analysis, Engineering Mathematics)</li><li>Supervise undergraduate projects and academic advising</li><li>MSc supervision: microplastic pollutants, AI flood prediction</li></ul></div></div>
+                <div class="timeline-item"><div class="timeline-content"><h3>Part-time Lecturer</h3><h4>Kaimosi Friends University</h4><p><em>2019 - Present</em></p><ul><li>Instruct courses: Mathematical Modeling, Numerical Analysis, Complex Analysis, Operation Research</li><li>Supervise undergraduate projects and academic advising</li></ul></div></div>
+                <div class="timeline-item"><div class="timeline-content"><h3>Part-time Lecturer</h3><h4>Kibabii University</h4><p><em>2018 - 2020</em></p><ul><li>Taught Mathematical Modeling, Numerical Analysis, Complex Analysis, Vector Analysis</li><li>Supervised undergraduate projects</li></ul></div></div>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
     <section class="education" id="education">
         <div class="container">
             <div class="section-title">
                 <h2>Education</h2>
             </div>
             <div class="education-content">
-                <div class="education-item">
-                    <h3>Doctor of Philosophy in Applied Mathematics</h3>
-                    <h4>Masinde Muliro University of Science and Technology</h4>
-                    <p><em>February 2019 - December 2024</em></p>
-                    <p><strong>Thesis:</strong> Mathematical Model for Cholera Dynamics with Vaccination and Temperature-Dependent Parameters</p>
-                    <p><strong>Supervisors:</strong> Dr. Akinyi Colleta, Dr. Frankline Tireito</p>
-                </div>
-                <div class="education-item">
-                    <h3>Master of Science in Applied Mathematics</h3>
-                    <h4>Masinde Muliro University of Science and Technology</h4>
-                    <p><em>2015 - December 2018</em></p>
-                    <p><strong>Thesis:</strong> Modeling the Role of Rehydration and Antibiotic Treatment on Reduction of Cholera Mortality</p>
-                    <p><strong>Supervisors:</strong> Dr. Akinyi Colleta, Prof. George Lawi</p>
-                </div>
-                <div class="education-item">
-                    <h3>Bachelor of Education Science (Mathematics and Physics)</h3>
-                    <h4>Masinde Muliro University of Science and Technology</h4>
-                    <p><em>2010 - 2014</em></p>
-                    <p>Second Class Honours, Upper Division</p>
-                </div>
-                <div class="education-item">
-                    <h3>Kenya Certificate of Secondary Education (KCSE)</h3>
-                    <h4>Kangeso Boys High School, Rongo - Migori County, Kenya</h4>
-                    <p><em>2004 - 2008</em></p>
-                </div>
-                <div class="education-item">
-                    <h3>Kenya Certificate of Primary Education (KCPE)</h3>
-                    <h4>Rabwao Primary School, Muhuru-Bay, Kenya</h4>
-                    <p><em>1995 - 2003</em></p>
-                </div>
+                <div class="education-item"><h3>Doctor of Philosophy in Applied Mathematics</h3><h4>Masinde Muliro University of Science and Technology</h4><p><em>Feb 2019 - Dec 2024</em></p><p><strong>Thesis:</strong> Mathematical Model for Cholera Dynamics with Vaccination and Temperature-Dependent Parameters</p><p><strong>Supervisors:</strong> Dr. Akinyi Colleta, Dr. Frankline Tireito</p><p><strong>Focus:</strong> Fractional-order dynamical systems, operator theory, nonsmooth analysis, existence/uniqueness proofs.</p></div>
+                <div class="education-item"><h3>Master of Science in Applied Mathematics</h3><h4>Masinde Muliro University of Science and Technology</h4><p><em>2015 - Dec 2018</em></p><p><strong>Thesis:</strong> Modeling the Role of Rehydration and Antibiotic Treatment on Reduction of Cholera Mortality</p><p><strong>Supervisors:</strong> Dr. Akinyi Colleta, Prof. George Lawi</p></div>
+                <div class="education-item"><h3>Bachelor of Education Science (Mathematics and Physics)</h3><h4>Masinde Muliro University of Science and Technology</h4><p><em>2010 - 2014</em></p><p>Second Class Honours, Upper Division</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Publications Section -->
     <section class="publications" id="publications">
         <div class="container">
             <div class="section-title">
-                <h2>Publications</h2>
+                <h2>Selected Publications</h2>
             </div>
             <div class="publications-grid">
-                <div class="publication-item">
-                    <div class="publication-info">
-                        <span class="publication-year">2024</span>
-                        <h3>A Between-Host Cholera Mathematical Model Incorporating Temperature Dependence</h3>
-                        <p>Owade, K. J., Okaka, A., & Tireito, F.</p>
-                        <p><em>African Journal of Empirical Research</em></p>
-                        <a href="https://example.com/paper1" class="publication-link" target="_blank">Read Paper</a>
-                    </div>
-                </div>
-                <div class="publication-item">
-                    <div class="publication-info">
-                        <span class="publication-year">2023</span>
-                        <h3>A Mathematical Model on the Dynamics of In-Host Infection Cholera Disease with Vaccination</h3>
-                        <p>Owade Kennedy Jackob, Okaka Akinyi, & Frankline Tireito</p>
-                        <p><em>Discrete Dynamics in Nature and Society</em></p>
-                        <a href="https://example.com/paper2" class="publication-link" target="_blank">Read Paper</a>
-                    </div>
-                </div>
-                <div class="publication-item">
-                    <div class="publication-info">
-                        <span class="publication-year">2020</span>
-                        <h3>Determination of the Equilibrium Point According to a Temporal Model of Rehydration in a Population with Cholera in Logistic Growth</h3>
-                        <p>Jackob, K. O.</p>
-                        <p><em>Journal of Advances in Mathematics and Computer Science</em></p>
-                        <a href="https://example.com/paper3" class="publication-link" target="_blank">Read Paper</a>
-                    </div>
-                </div>
-                <div class="publication-item">
-                    <div class="publication-info">
-                        <span class="publication-year">2020</span>
-                        <h3>Mathematical Modeling and Analysis of Mathematics Anxiety Behavior on Mathematics Performance in Kenya</h3>
-                        <p>Nathan, O. M., & Jackob, K. O.</p>
-                        <p><em>Journal of Advances in Mathematics and Computer Science</em></p>
-                        <a href="https://example.com/paper4" class="publication-link" target="_blank">Read Paper</a>
-                    </div>
-                </div>
-                <div class="publication-item">
-                    <div class="publication-info">
-                        <span class="publication-year">2019</span>
-                        <h3>Stability Analysis in a Mathematical Model of Corruption in Kenya</h3>
-                        <p>Nathan, O. M., & Jackob, K. O.</p>
-                        <p><em>Asian Research Journal of Mathematics</em></p>
-                        <a href="https://example.com/paper5" class="publication-link" target="_blank">Read Paper</a>
-                    </div>
-                </div>
-                <div class="publication-item">
-                    <div class="publication-info">
-                        <span class="publication-year">2019</span>
-                        <h3>Modeling the Role of Rehydration and Antibiotic Treatment on Reduction of Cholera Mortality</h3>
-                        <p>Owade Kennedy Jackob, Akinyi Colleta, & Owutor George Lawi</p>
-                        <p><em>IOSR Journal of Mathematics</em></p>
-                        <a href="https://example.com/paper6" class="publication-link" target="_blank">Read Paper</a>
-                    </div>
-                </div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">2025</span><h3>Dynamics of the Fractional-Order Between-Host Cholera Model With Temperature-Dependence</h3><p>Owade Kennedy Jackob & Colletta Akinyi</p><p><em>Abstract and Applied Analysis, Wiley</em></p><a href="https://onlinelibrary.wiley.com/doi/10.1155/aaa/2312040" class="publication-link" target="_blank">View Article</a></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">2024</span><h3>A Between-Host Cholera Mathematical Model Incorporating Temperature Dependence</h3><p>Owade, K. J., Okaka, A., & Tireito, F.</p><p><em>African Journal of Empirical Research, 5(3)</em></p><a href="#" class="publication-link">Read</a></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">2023</span><h3>A Mathematical Model on the Dynamics of In-Host Infection Cholera Disease with Vaccination</h3><p>Owade, Okaka, & Tireito</p><p><em>Discrete Dynamics in Nature and Society</em></p><a href="https://onlinelibrary.wiley.com/doi/10.1155/2023/1465228" class="publication-link" target="_blank">View Article</a></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">2020</span><h3>Mathematical Modeling and Analysis of Mathematics Anxiety Behavior on Mathematics Performance in Kenya</h3><p>Nathan, O. M., & Jackob, K. O.</p><p><em>Journal of Advances in Mathematics and Computer Science</em></p></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">2019</span><h3>Stability Analysis in a Mathematical Model of Corruption in Kenya</h3><p>Nathan, O. M., & Jackob, K. O.</p><p><em>Asian Research Journal of Mathematics</em></p></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">2019</span><h3>Modeling the Role of Rehydration and Antibiotic Treatment on Reduction of Cholera Mortality</h3><p>Owade, Colleta, & Lawi</p><p><em>IOSR Journal of Mathematics</em></p></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">In Progress</span><h3>Multiscale Mathematical Analysis of HIV/AIDS Dynamics: Quantifying the Impact of Community Health Promoters</h3><p>Owade, K. J.</p><p><em>Revised Manuscript Submitted: Elsevier Journal of Results in Control and Optimization (RICO)</em></p></div></div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-title">
@@ -1083,54 +952,17 @@
             </div>
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Location</h3>
-                            <p>P.O. Box 190, 50100 Kakamega, Kenya</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p>knowade@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Phone</h3>
-                            <p>+254726427459 / +254739554322</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-researchgate"></i></a>
-                        <a href="#"><i class="fab fa-google-scholar"></i></a>
-                    </div>
+                    <div class="contact-item"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div class="contact-details"><h3>Location</h3><p>Kajiado / Kakamega, Kenya</p></div></div>
+                    <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div class="contact-details"><h3>Email</h3><p>knowade@gmail.com</p></div></div>
+                    <div class="contact-item"><div class="contact-icon"><i class="fas fa-phone"></i></div><div class="contact-details"><h3>Phone</h3><p>+254726427459 / +254739554322</p></div></div>
+                    <div class="social-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-researchgate"></i></a><a href="#"><i class="fab fa-google-scholar"></i></a></div>
                 </div>
                 <div class="contact-form">
                     <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="Your Message" required></textarea>
-                        </div>
+                        <div class="form-group"><input type="text" class="form-control" placeholder="Your Name" required></div>
+                        <div class="form-group"><input type="email" class="form-control" placeholder="Your Email" required></div>
+                        <div class="form-group"><input type="text" class="form-control" placeholder="Subject"></div>
+                        <div class="form-group"><textarea class="form-control" placeholder="Your Message" required></textarea></div>
                         <button type="submit" class="btn">Send Message</button>
                     </form>
                 </div>
@@ -1138,97 +970,23 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <h3>Dr. Owade Kennedy Jackob</h3>
-                    <p>Applied Mathematician specializing in Mathematical Modeling, Differential Equations, and Epidemiology for Environmental Systems.</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#summary">Summary</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#publications">Publications</a></li>
-                        <li><a href="#cv">CV</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Dr. Owade Kennedy Jackob. All Rights Reserved.</p>
-            </div>
+            <div class="footer-content"><div class="footer-about"><h3>Dr. Owade Kennedy Jackob</h3><p>Applied Mathematician specializing in convex/nonsmooth analysis, dynamical systems, and mathematical epidemiology.</p></div><div class="footer-links"><h3>Quick Links</h3><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#publications">Publications</a></li><li><a href="#cv">CV</a></li></ul></div></div>
+            <div class="copyright"><p>&copy; 2026 Dr. Owade Kennedy Jackob. All Rights Reserved. Updated from CV March 2026.</p></div>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Add animation to elements when they come into view
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.about-content, .summary-content, .timeline-item, .education-item, .publication-item, .contact-content').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(el);
-        });
+        menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+        document.querySelectorAll('.nav-links a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('active'); }); });
+        document.getElementById('contactForm').addEventListener('submit', function(e) { e.preventDefault(); alert('Thank you for your message! I will respond promptly.'); this.reset(); });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { e.preventDefault(); const targetId = this.getAttribute('href'); if(targetId === '#') return; const targetElement = document.querySelector(targetId); if(targetElement) { window.scrollTo({ top: targetElement.offsetTop - 80, behavior: 'smooth' }); } }); });
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } }); }, observerOptions);
+        document.querySelectorAll('.about-content, .summary-content, .timeline-item, .education-item, .publication-item, .contact-content').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(20px)'; el.style.transition = 'opacity 0.5s ease, transform 0.5s ease'; observer.observe(el); });
     </script>
 </body>
 </html>
