@@ -228,22 +228,26 @@
             border: 5px solid white;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             transition: transform 0.5s ease;
-            background: #ddd;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            color: #555;
         }
 
         .profile-photo:hover {
             transform: scale(1.05);
         }
 
-        .profile-photo i {
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-photo .placeholder-icon {
             font-size: 5rem;
             color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            opacity: 0.9;
         }
 
         /* About Section */
@@ -258,17 +262,29 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            background: #eef2f5;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 300px;
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
         }
 
-        .about-img i {
-            font-size: 8rem;
-            color: var(--primary-color);
-            opacity: 0.7;
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-img .placeholder-icon {
+            font-size: 6rem;
+            color: white;
+            opacity: 0.8;
         }
 
         .about-text {
@@ -482,6 +498,7 @@
             margin-bottom: 10px;
             color: var(--secondary-color);
             font-size: 1rem;
+            line-height: 1.4;
         }
 
         .publication-info p {
@@ -619,6 +636,14 @@
         textarea.form-control {
             min-height: 150px;
             resize: vertical;
+        }
+
+        /* Image Upload Hint */
+        .image-hint {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 10px;
+            text-align: center;
         }
 
         /* Footer */
@@ -833,8 +858,8 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <div class="profile-photo">
-                    <i class="fas fa-user-circle"></i>
+                <div class="profile-photo" id="profilePhoto">
+                    <i class="fas fa-user-circle placeholder-icon"></i>
                 </div>
                 <h1>Dr. Owade Kennedy Jackob</h1>
                 <p>Applied Mathematician | Lecturer | Researcher in Dynamical Systems, Optimization & Mathematical Epidemiology</p>
@@ -852,8 +877,8 @@
                 <h2>About Me</h2>
             </div>
             <div class="about-content">
-                <div class="about-img">
-                    <i class="fas fa-chalkboard-teacher"></i>
+                <div class="about-img" id="aboutImage">
+                    <i class="fas fa-chalkboard-teacher placeholder-icon"></i>
                 </div>
                 <div class="about-text">
                     <h3>Applied Mathematician, Educator & Researcher</h3>
@@ -978,15 +1003,50 @@
     </footer>
 
     <script>
+        // Mobile Menu Toggle
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
         menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
         document.querySelectorAll('.nav-links a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('active'); }); });
+        
+        // Form submission
         document.getElementById('contactForm').addEventListener('submit', function(e) { e.preventDefault(); alert('Thank you for your message! I will respond promptly.'); this.reset(); });
+        
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { e.preventDefault(); const targetId = this.getAttribute('href'); if(targetId === '#') return; const targetElement = document.querySelector(targetId); if(targetElement) { window.scrollTo({ top: targetElement.offsetTop - 80, behavior: 'smooth' }); } }); });
+        
+        // Animation observer
         const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
         const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } }); }, observerOptions);
         document.querySelectorAll('.about-content, .summary-content, .timeline-item, .education-item, .publication-item, .contact-content').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(20px)'; el.style.transition = 'opacity 0.5s ease, transform 0.5s ease'; observer.observe(el); });
+        
+        // Function to load profile image - save your photo as "profile.jpg" in the same folder
+        function loadProfileImage() {
+            const profilePhoto = document.getElementById('profilePhoto');
+            const aboutImage = document.getElementById('aboutImage');
+            const img = new Image();
+            img.onload = function() {
+                // Replace placeholder with actual image
+                profilePhoto.innerHTML = '';
+                const imgElement = document.createElement('img');
+                imgElement.src = 'profile.jpg';
+                imgElement.alt = 'Dr. Owade Kennedy Jackob';
+                profilePhoto.appendChild(imgElement);
+                
+                aboutImage.innerHTML = '';
+                const aboutImgElement = document.createElement('img');
+                aboutImgElement.src = 'profile.jpg';
+                aboutImgElement.alt = 'Dr. Owade Kennedy Jackob';
+                aboutImage.appendChild(aboutImgElement);
+            };
+            img.onerror = function() {
+                console.log('Profile image not found. Please add a photo named "profile.jpg" to display your picture.');
+            };
+            img.src = 'profile.jpg';
+        }
+        
+        // Try to load profile image
+        loadProfileImage();
     </script>
 </body>
 </html>
