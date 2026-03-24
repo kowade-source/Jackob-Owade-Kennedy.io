@@ -1120,7 +1120,7 @@
             observer.observe(el); 
         });
         
-        // Function to load profile image
+        // Function to load profile image - now using 3.jpg
         function loadProfileImage() {
             const profilePhoto = document.getElementById('profilePhoto');
             const aboutImage = document.getElementById('aboutImage');
@@ -1129,22 +1129,23 @@
                 if (profilePhoto) {
                     profilePhoto.innerHTML = '';
                     const imgElement = document.createElement('img');
-                    imgElement.src = 'profile.jpg';
+                    imgElement.src = '3.jpg';
                     imgElement.alt = 'Dr. Owade Kennedy Jackob';
                     profilePhoto.appendChild(imgElement);
                 }
                 if (aboutImage) {
                     aboutImage.innerHTML = '';
                     const aboutImgElement = document.createElement('img');
-                    aboutImgElement.src = 'profile.jpg';
+                    aboutImgElement.src = '3.jpg';
                     aboutImgElement.alt = 'Dr. Owade Kennedy Jackob';
                     aboutImage.appendChild(aboutImgElement);
                 }
             };
             img.onerror = function() {
-                console.log('Profile image not found. Please add a photo named "profile.jpg" to display your picture.');
+                console.log('Profile image not found. Please add a photo named "3.jpg" to display your picture.');
+                // Keep the placeholder icons if image not found
             };
-            img.src = 'profile.jpg';
+            img.src = '3.jpg';
         }
         
         loadProfileImage();
