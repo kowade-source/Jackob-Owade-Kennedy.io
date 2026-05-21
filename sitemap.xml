@@ -1,82 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
     <!-- Home Page -->
     <url>
         <loc>https://kowade-source.github.io/Jackob-Owade-Kennedy.io/</loc>
-        <lastmod>2026-05-21</lastmod>
+        <lastmod>2025-05-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    
-    <!-- Main Sections -->
-    <url>
-        <loc>https://kowade-source.github.io/Jackob-Owade-Kennedy.io/#home</loc>
-        <lastmod>2026-05-21</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <url>
-        <loc>https://kowade-source.github.io/Jackob-Owade-Kennedy.io/#about</loc>
-        <lastmod>2026-05-21</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <url>
-        <loc>https://kowade-source.github.io/Jackob-Owade-Kennedy.io/#summary</loc>
-        <lastmod>2026-05-21</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://kowade-source.github.io/Jackob-Owade-Kennedy.io/#experience</loc>
-        <lastmod>2026-05-21</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <url>
-        <loc>https://kowade-source.github.io/Jackob-Owade-Kennedy.io/#education</loc>
-        <lastmod>2026-05-21</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://kowade-source.github.io/Jackob-Owade-Kennedy.io/#publications</loc>
-        <lastmod>2026-05-21</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    
-    <url>
-        <loc>https://kowade-source.github.io/Jackob-Owade-Kennedy.io/#supervision</loc>
-        <lastmod>2026-05-21</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://kowade-source.github.io/Jackob-Owade-Kennedy.io/#cv</loc>
-        <lastmod>2026-05-21</lastmod>
-        <changefreq>quarterly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    
-    <url>
-        <loc>https://kowade-source.github.io/Jackob-Owade-Kennedy.io/#contact</loc>
-        <lastmod>2026-05-21</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Resources -->
+
+    <!-- CV PDF -->
     <url>
         <loc>https://kowade-source.github.io/Jackob-Owade-Kennedy.io/JACKOB_CV.pdf</loc>
-        <lastmod>2026-05-21</lastmod>
+        <lastmod>2025-05-21</lastmod>
         <changefreq>quarterly</changefreq>
-        <priority>0.85</priority>
+        <priority>0.8</priority>
     </url>
+
 </urlset>
