@@ -568,7 +568,7 @@
             margin-bottom: 10px;
         }
 
-        /* Research Supervision Section */
+        /* Research Supervision & Awards Sections */
         .supervision-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -591,6 +591,16 @@
         .supervision-item h4 {
             color: var(--primary-color);
             margin-bottom: 10px;
+        }
+
+        .supervision-item ul {
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .supervision-item li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
         }
 
         /* Contact Section */
@@ -864,6 +874,7 @@
                     <li><a href="#education">Education</a></li>
                     <li><a href="#publications">Publications</a></li>
                     <li><a href="#supervision">Supervision</a></li>
+                    <li><a href="#awards">Awards</a></li>
                     <li><a href="#cv">CV</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -881,7 +892,7 @@
                     <i class="fas fa-user-circle placeholder-icon"></i>
                 </div>
                 <h1>Dr. Owade Kennedy Jackob</h1>
-                <p>Applied Mathematician | Lecturer | Researcher in Convex Analysis, Dynamical Systems & Mathematical Epidemiology</p>
+                <p>Applied Mathematician | Lecturer &amp; Director of Research | Convex Analysis, Dynamical Systems &amp; Mathematical Epidemiology</p>
                 <div class="hero-btns">
                     <a href="#publications" class="btn">View My Research</a>
                     <a href="#cv" class="btn btn-outline">Download CV</a>
@@ -900,14 +911,19 @@
                     <i class="fas fa-chalkboard-teacher placeholder-icon"></i>
                 </div>
                 <div class="about-text">
-                    <h3>Applied Mathematician, Educator & Researcher</h3>
-                    <p>I am a dedicated applied mathematician with a PhD from Masinde Muliro University of Science and Technology. My research spans convex and nonsmooth analysis, monotone operator theory, fractional-order dynamical systems, and mathematical epidemiology. Currently, I serve as Lecturer at UMMA University and continue part-time teaching at MMUST and Kaimosi Friends University.</p>
-                    <p>My work integrates operator-based formulations, nonsmooth analysis, and convex optimization to address complex challenges in infectious disease modeling, resource allocation, and climate resilience. I actively supervise MSc students in applied mathematics and have published in leading journals including Wiley, Elsevier, and Discrete Dynamics in Nature and Society.</p>
+                    <h3>Applied Mathematician, Educator &amp; Research Leader</h3>
+                    <p>I am a dedicated applied mathematician with a PhD from Masinde Muliro University of Science and Technology, currently serving as Lecturer and Director of Research and Postgraduate Studies at UMMA University. My research spans convex and nonsmooth analysis, monotone operator theory, fractional-order dynamical systems, and mathematical epidemiology.</p>
+                    <p>My current research program — <strong>Flood-Driven Cholera Reservoir Dynamics</strong> — combines complex-time (kime) modeling, AI-based flood mapping (Sentinel-1 SAR/MODIS with U-Net CNNs), and physics-informed neural networks (PINNs) to infer hidden reservoir mechanisms from sparse environmental and case data. I also integrate operator-based formulations, nonsmooth analysis, and convex optimization to address challenges in infectious disease modeling, resource allocation, and climate resilience.</p>
+                    <p>I actively supervise MSc and postgraduate students in applied mathematics and education, and have published in leading journals including Wiley, Elsevier, and Discrete Dynamics in Nature and Society.</p>
                     <div class="skills">
                         <span class="skill">Convex/Nonsmooth Analysis</span>
                         <span class="skill">Monotone Operator Theory</span>
                         <span class="skill">Fractional Dynamical Systems</span>
+                        <span class="skill">Complex-Time (Kime) Modeling</span>
+                        <span class="skill">Physics-Informed Neural Networks</span>
+                        <span class="skill">AI-Based Flood Mapping</span>
                         <span class="skill">KKT Conditions</span>
+                        <span class="skill">Fisher Information &amp; Identifiability</span>
                         <span class="skill">MATLAB/Python/R</span>
                         <span class="skill">Mathematical Epidemiology</span>
                         <span class="skill">Proximal Algorithms</span>
@@ -925,9 +941,9 @@
                 <h2>Academic Profile Summary</h2>
             </div>
             <div class="summary-content">
-                <p>Dr. Owade Kennedy Jackob is an accomplished applied mathematician with expertise in convex and nonsmooth analysis, monotone operator theory, fractional-order dynamical systems, and optimal control. His doctoral thesis developed a temperature-dependent fractional-order cholera model with vaccination, utilizing fixed-point theorems and operator theory.</p>
-                <p>Currently a Lecturer at UMMA University and Examination Coordinator, he has extensive teaching experience in differential equations, mathematical modeling, numerical analysis, and optimization. His current research includes a multiscale HIV/AIDS model quantifying community health promoter impact, which has been revised and resubmitted to Results in Control and Optimization (Elsevier).</p>
-                <p>Dr. Jackob holds professional memberships with the European Mathematical Society (2024-Present) and the Teachers Service Commission, Kenya (2017-2026). He has received multiple Certificates of Excellence in Reviewing from Wiley, Elsevier, and other publishers. He supervises MSc research in PDE-constrained problems (microplastic pollutants) and AI-driven flood prediction for climate resilience.</p>
+                <p>Dr. Owade Kennedy Jackob is an applied mathematician with expertise in convex and nonsmooth analysis, monotone operator theory, fractional-order dynamical systems, and optimal control. His doctoral thesis developed a temperature-dependent fractional-order cholera model with vaccination, utilizing fixed-point theorems and operator theory.</p>
+                <p>Currently Lecturer and Director of Research and Postgraduate Studies at UMMA University, he has extensive teaching experience in differential equations, mathematical modeling, numerical analysis, and optimization. His recent publication in <em>Results in Control and Optimization</em> (Elsevier, 2026) presents a multiscale HIV/AIDS model quantifying the impact of community health promoters on epidemic control.</p>
+                <p>His current research program integrates complex-time modeling, AI-based flood mapping, and physics-informed neural networks (PINNs) to understand how flooding reshapes the environmental biology of <em>Vibrio cholerae</em> in East Africa. Dr. Jackob holds professional memberships with the European Mathematical Society (2024–Present) and the Teachers Service Commission, Kenya (2017–2026), and has received multiple Certificates of Excellence in Reviewing from Springer Nature, Wiley, and Elsevier. He supervises MSc research in PDE-constrained problems (microplastic pollutants) and AI-driven flood prediction for climate resilience.</p>
             </div>
         </div>
     </section>
@@ -936,8 +952,8 @@
         <div class="container">
             <div class="cv-content">
                 <h2>Curriculum Vitae</h2>
-                <p>Download my complete CV for detailed information about education, research, publications, teaching experience, and professional background (updated March 2026).</p>
-                <a href="JACKOB_CV.pdf" class="cv-btn" download>
+                <p>Download my complete CV for detailed information about education, research, publications, teaching experience, and professional background (updated November 2026).</p>
+                <a href="OWADE_KENNEDY_JACKOB_CV.pdf" class="cv-btn" download>
                     <i class="fas fa-download"></i>
                     Download CV (PDF)
                 </a>
@@ -951,9 +967,10 @@
                 <h2>Professional Experience</h2>
             </div>
             <div class="timeline">
-                <div class="timeline-item"><div class="timeline-content"><h3>Lecturer & Examination Coordinator</h3><h4>UMMA University, School of Education, Kajiado, Kenya</h4><p><em>2026 - Present</em></p><ul><li>Teach and supervise undergraduate and postgraduate students</li><li>Curriculum review for Bachelor of Education Science courses</li><li>Examination Coordinator, Department of Education Science</li><li>Contribute to university research agenda in applied mathematics</li></ul></div></div>
-                <div class="timeline-item"><div class="timeline-content"><h3>Part-time Lecturer</h3><h4>Masinde Muliro University of Science and Technology</h4><p><em>2016 - Present</em></p><ul><li>Teach undergraduate and graduate courses (ODE, PDE, Mathematical Modeling, Numerical Analysis, Engineering Mathematics)</li><li>Supervise undergraduate projects and academic advising</li><li>MSc supervision: microplastic pollutants, AI flood prediction</li></ul></div></div>
-                <div class="timeline-item"><div class="timeline-content"><h3>Part-time Lecturer</h3><h4>Kaimosi Friends University</h4><p><em>2019 - Present</em></p><ul><li>Instruct courses: Mathematical Modeling, Numerical Analysis, Complex Analysis, Operation Research</li><li>Supervise undergraduate projects and academic advising</li></ul></div></div>
+                <div class="timeline-item"><div class="timeline-content"><h3>Lecturer &amp; Director Research and Postgraduate Studies</h3><h4>UMMA University, School of Education, Kajiado, Kenya</h4><p><em>January 2026 - Present</em></p><ul><li>Teach and supervise undergraduate and postgraduate students</li><li>Lead research and postgraduate studies strategy in line with the University's Strategic Plan 2026–2030</li><li>Curriculum review for Bachelor of Education Science courses</li><li>Examination Coordinator, Department of Education Science</li><li>Contribute to the university research agenda in applied mathematics</li></ul></div></div>
+                <div class="timeline-item"><div class="timeline-content"><h3>Part-time Lecturer</h3><h4>Masinde Muliro University of Science and Technology</h4><p><em>September 2019 - January 2026</em></p><ul><li>Taught undergraduate and graduate courses (ODE, PDE, Mathematical Modeling, Numerical Analysis, Engineering Mathematics)</li><li>Supervised undergraduate projects and academic advising</li><li>MSc supervision: microplastic pollutants, AI flood prediction</li></ul></div></div>
+                <div class="timeline-item"><div class="timeline-content"><h3>Part-time Lecturer</h3><h4>Kaimosi Friends University</h4><p><em>September 2019 - January 2026</em></p><ul><li>Instructed courses: Mathematical Modeling, Numerical Analysis, Complex Analysis, Operation Research</li><li>Supervised undergraduate projects and academic advising</li></ul></div></div>
+                <div class="timeline-item"><div class="timeline-content"><h3>High School Teacher</h3><h4>St. Francis Xavier Secondary School, Shipalo, Kakamega, Kenya</h4><p><em>January 2017 - January 2026</em></p><ul><li>Taught Mathematics and Physics at secondary school level</li><li>Prepared students for national examinations (KCSE)</li></ul></div></div>
                 <div class="timeline-item"><div class="timeline-content"><h3>Part-time Lecturer</h3><h4>Kibabii University</h4><p><em>2018 - 2020</em></p><ul><li>Taught Mathematical Modeling, Numerical Analysis, Complex Analysis, Vector Analysis</li><li>Supervised undergraduate projects</li></ul></div></div>
             </div>
         </div>
@@ -967,8 +984,10 @@
             <div class="education-content">
                 <div class="education-item"><h3>Doctor of Philosophy in Applied Mathematics</h3><h4>Masinde Muliro University of Science and Technology</h4><p><em>Feb 2019 - Dec 2024</em></p><p><strong>Thesis:</strong> Mathematical Model for Cholera Dynamics with Vaccination and Temperature-Dependent Parameters</p><p><strong>Supervisors:</strong> Dr. Akinyi Colleta, Dr. Frankline Tireito</p><p><strong>Focus:</strong> Fractional-order dynamical systems, operator theory, nonsmooth analysis, existence/uniqueness proofs using fixed-point theorems.</p></div>
                 <div class="education-item"><h3>Master of Science in Applied Mathematics</h3><h4>Masinde Muliro University of Science and Technology</h4><p><em>2015 - Dec 2018</em></p><p><strong>Thesis:</strong> Modeling the Role of Rehydration and Antibiotic Treatment on Reduction of Cholera Mortality</p><p><strong>Supervisors:</strong> Dr. Akinyi Colleta, Prof. George Lawi</p><p><strong>Focus:</strong> ODE systems, Lyapunov stability, equilibrium analysis.</p></div>
-                <div class="education-item"><h3>Bachelor of Education Science (Mathematics and Physics)</h3><h4>Masinde Muliro University of Science and Technology</h4><p><em>2010 - 2014</em></p><p>Second Class Honours, Upper Division</p></div>
-                <div class="education-item"><h3>Professional Training</h3><h4>OPSWAT Academy</h4><p><em>2026</em></p><p>Cyber Security Fundamentals Associate & Network Security Associate</p></div>
+                <div class="education-item"><h3>Bachelor of Education Science (Mathematics and Physics)</h3><h4>Masinde Muliro University of Science and Technology</h4><p><em>2010 - July 2014</em></p><p>Second Class Honours, Upper Division</p></div>
+                <div class="education-item"><h3>Kenya Certificate of Secondary Education (KCSE)</h3><h4>Kangeso Secondary School, Rongo, Kenya</h4><p><em>2004 - Dec 2008</em></p></div>
+                <div class="education-item"><h3>Kenya Certificate of Primary Education (KCPE)</h3><h4>Rabwao Primary School, Muhuru-Bay, Migori, Kenya</h4><p><em>1995 - Dec 2003</em></p></div>
+                <div class="education-item"><h3>Professional Training</h3><h4>OPSWAT Academy &amp; Kakamega School of Professional Studies</h4><p><em>2026 &amp; 2023</em></p><p>OPSWAT Cyber Security Fundamentals Associate &amp; Network Security Associate (2026); Certificate in Computer Applications, Kakamega School of Professional Studies (2023)</p></div>
             </div>
         </div>
     </section>
@@ -979,14 +998,14 @@
                 <h2>Selected Publications</h2>
             </div>
             <div class="publications-grid">
-                <div class="publication-item"><div class="publication-info"><span class="publication-year">2025</span><h3>Dynamics of the Fractional-Order Between-Host Cholera Model With Temperature-Dependence</h3><p>Owade Kennedy Jackob & Colletta Akinyi</p><p><em>Abstract and Applied Analysis, Wiley</em></p><a href="https://onlinelibrary.wiley.com/doi/10.1155/aaa/2312040" class="publication-link" target="_blank">View Article</a></div></div>
-                <div class="publication-item"><div class="publication-info"><span class="publication-year">2024</span><h3>A Between-Host Cholera Mathematical Model Incorporating Temperature Dependence</h3><p>Owade, K. J., Okaka, A., & Tireito, F.</p><p><em>African Journal of Empirical Research, 5(3)</em></p></div></div>
-                <div class="publication-item"><div class="publication-info"><span class="publication-year">2023</span><h3>A Mathematical Model on the Dynamics of In-Host Infection Cholera Disease with Vaccination</h3><p>Owade Kennedy Jackob, Okaka Akinyi, & Frankline Tireito</p><p><em>Discrete Dynamics in Nature and Society</em></p><a href="https://onlinelibrary.wiley.com/doi/10.1155/2023/1465228" class="publication-link" target="_blank">View Article</a></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">2026</span><h3>Multiscale Mathematical Analysis of HIV/AIDS Dynamics: Quantifying the Impact of Community Health Promoters on Epidemic Control</h3><p>Owade, K. J., Oganga, D. O., &amp; Mabwi, H. A.</p><p><em>Results in Control and Optimization, 23, 100728 (Elsevier)</em></p><a href="https://doi.org/10.1016/j.rico.2026.100728" class="publication-link" target="_blank">View Article</a></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">2025</span><h3>Dynamics of the Fractional-Order Between-Host Cholera Model With Temperature-Dependence</h3><p>Owade Kennedy Jackob &amp; Colletta Akinyi</p><p><em>Abstract and Applied Analysis, Wiley</em></p><a href="https://onlinelibrary.wiley.com/doi/10.1155/aaa/2312040" class="publication-link" target="_blank">View Article</a></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">2024</span><h3>A Between-Host Cholera Mathematical Model Incorporating Temperature Dependence</h3><p>Owade, K. J., Okaka, A., &amp; Tireito, F.</p><p><em>African Journal of Empirical Research, 5(4)</em></p></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">2023</span><h3>A Mathematical Model on the Dynamics of In-Host Infection Cholera Disease with Vaccination</h3><p>Owade Kennedy Jackob, Okaka Akinyi, &amp; Frankline Tireito</p><p><em>Discrete Dynamics in Nature and Society</em></p><a href="https://onlinelibrary.wiley.com/doi/10.1155/2023/1465228" class="publication-link" target="_blank">View Article</a></div></div>
                 <div class="publication-item"><div class="publication-info"><span class="publication-year">2020</span><h3>Determination of the Equilibrium Point According to a Temporal Model of Rehydration in a Population with Cholera in Logistic Growth</h3><p>Jackob, K. O.</p><p><em>Journal of Advances in Mathematics and Computer Science, 35(4), 1-12</em></p></div></div>
-                <div class="publication-item"><div class="publication-info"><span class="publication-year">2020</span><h3>Mathematical Modeling and Analysis of Mathematics Anxiety Behavior on Mathematics Performance in Kenya</h3><p>Nathan, O. M., & Jackob, K. O.</p><p><em>Journal of Advances in Mathematics and Computer Science, 35(5), 45-58</em></p></div></div>
-                <div class="publication-item"><div class="publication-info"><span class="publication-year">2019</span><h3>Stability Analysis in a Mathematical Model of Corruption in Kenya</h3><p>Nathan, O. M., & Jackob, K. O.</p><p><em>Asian Research Journal of Mathematics, 15(2), 1-11</em></p></div></div>
-                <div class="publication-item"><div class="publication-info"><span class="publication-year">2019</span><h3>Modeling the Role of Rehydration and Antibiotic Treatment on Reduction of Cholera Mortality</h3><p>Owade Kennedy Jackob, Akinyi Colleta, & Owuor George Lawi</p><p><em>IOSR Journal of Mathematics, 15(6), 38-48</em></p></div></div>
-                <div class="publication-item"><div class="publication-info"><span class="publication-year">Under Review</span><h3>Multiscale Mathematical Analysis of HIV/AIDS Dynamics: Quantifying the Impact of Community Health Promoters on Epidemic Control</h3><p>Owade, K. J.</p><p><em>Elsevier Journal of Results in Control and Optimization (RICO) - Revised Manuscript Submitted</em></p></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">2020</span><h3>Mathematical Modeling and Analysis of Mathematics Anxiety Behavior on Mathematics Performance in Kenya</h3><p>Nathan, O. M., &amp; Jackob, K. O.</p><p><em>Journal of Advances in Mathematics and Computer Science, 35(5), 45-58</em></p></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">2019</span><h3>Stability Analysis in a Mathematical Model of Corruption in Kenya</h3><p>Nathan, O. M., &amp; Jackob, K. O.</p><p><em>Asian Research Journal of Mathematics, 15(2), 1-11</em></p></div></div>
+                <div class="publication-item"><div class="publication-info"><span class="publication-year">2019</span><h3>Modeling the Role of Rehydration and Antibiotic Treatment on Reduction of Cholera Mortality</h3><p>Owade Kennedy Jackob, Akinyi Colleta, &amp; Owuor George Lawi</p><p><em>IOSR Journal of Mathematics, 15(6), 38-48</em></p></div></div>
             </div>
         </div>
     </section>
@@ -998,17 +1017,67 @@
             </div>
             <div class="supervision-grid">
                 <div class="supervision-item">
-                    <h4>MSc Supervisor (2025-Present)</h4>
+                    <h4>MSc Supervisor, MMUST (2025-Present)</h4>
                     <p><strong>Student:</strong> Nicholas Okuku Alele</p>
                     <p><strong>Thesis:</strong> Modeling the Spread of Microplastic Pollutants in Aquatic Systems Using Advection-Diffusion Equation</p>
                     <p><strong>Relevance:</strong> PDE-constrained problems, operator splitting methods, numerical analysis</p>
                 </div>
                 <div class="supervision-item">
-                    <h4>MSc Supervisor (2025-Present)</h4>
+                    <h4>MSc Supervisor, MMUST (2025-Present)</h4>
                     <p><strong>Student:</strong> Caleb Ariko</p>
                     <p><strong>Thesis:</strong> An AI-Driven Model for High-Resolution Flood Prediction for Enhancing Climate Resilience in Kenya</p>
                     <p><strong>Relevance:</strong> Optimization algorithms, training dynamics, nonsmooth problems, machine learning</p>
                     <p><em>Commonwealth Shared Scholarship 2026/27 - CSC Reference: 11064219-CSS-KE-26</em></p>
+                </div>
+                <div class="supervision-item">
+                    <h4>MED Supervisor, UMMA (2026-Present)</h4>
+                    <p><strong>Student:</strong> Salwa Abdisalan Sheikh</p>
+                    <p><strong>Thesis:</strong> Influence of Leadership Styles on Academic Performance of Students in Secondary Schools in Kajiado County</p>
+                </div>
+                <div class="supervision-item">
+                    <h4>PGDE Supervisor, UMMA (2026-Present)</h4>
+                    <p><strong>Student:</strong> Halima Saado</p>
+                    <p><strong>Thesis:</strong> The Influence of Institutional Policy Frameworks on the Embedding of Sustainability Practices at Umma University</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="awards" id="awards">
+        <div class="container">
+            <div class="section-title">
+                <h2>Awards, Grants &amp; Service</h2>
+            </div>
+            <div class="supervision-grid">
+                <div class="supervision-item">
+                    <h4>Awards &amp; Recognition</h4>
+                    <ul>
+                        <li><strong>2026</strong> — Certificate of Excellence in Reviewing, <em>Springer Nature (Discover Applied Sciences)</em></li>
+                        <li><strong>2025</strong> — Certificate of Excellence in Reviewing, <em>Vacunas (Elsevier)</em></li>
+                        <li><strong>2025</strong> — Certificate of Excellence in Reviewing, <em>Asian Journal of Research in Infectious Diseases</em></li>
+                        <li><strong>2025</strong> — Certificate of Excellence in Reviewing, <em>Asian Research Journal of Mathematics</em></li>
+                        <li><strong>2025</strong> — Certificate of Excellence in Reviewing, <em>Journal of Advances in Mathematics and Computer Science</em></li>
+                    </ul>
+                </div>
+                <div class="supervision-item">
+                    <h4>Grants</h4>
+                    <ul>
+                        <li><strong>2026</strong> — European Mathematical Society (EMS Calls), <em>Under Review</em></li>
+                        <li><strong>2015/2016</strong> — Graduate Internship Grant, Association of African Universities (USD 1,000 for a 3-month internship)</li>
+                    </ul>
+                </div>
+                <div class="supervision-item">
+                    <h4>Conferences &amp; Talks</h4>
+                    <ul>
+                        <li><strong>May 2026</strong> — Association of African Universities, <em>African Academic Heritage Fair 2026 (AAU)</em></li>
+                        <li><strong>2026</strong> — <em>Multiscale Mathematical Analysis of HIV/AIDS Dynamics</em>, UMMA University Research Colloquium, Kajiado, Kenya</li>
+                    </ul>
+                </div>
+                <div class="supervision-item">
+                    <h4>Community Service</h4>
+                    <ul>
+                        <li><strong>2020–Present</strong> — Secretary and Head of Linkages, <em>BodaBoda Medical Ventures Ltd</em>: structural management, coordination, research expertise, and stakeholder linkages for youth empowerment.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -1022,7 +1091,7 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div class="contact-details"><h3>Location</h3><p>Kajiado / Kakamega, Kenya</p></div></div>
-                    <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div class="contact-details"><h3>Email</h3><p>knowade@gmail.com</p></div></div>
+                    <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div class="contact-details"><h3>Email</h3><p>ojackob@umma.ac.ke / knowade@gmail.com</p></div></div>
                     <div class="contact-item"><div class="contact-icon"><i class="fas fa-phone"></i></div><div class="contact-details"><h3>Phone</h3><p>+254726427459 / +254739554322</p></div></div>
                     <div class="contact-item"><div class="contact-icon"><i class="fab fa-orcid"></i></div><div class="contact-details"><h3>ORCID</h3><p>0000-0003-2931-5914</p></div></div>
                     <div class="social-links">
@@ -1058,13 +1127,14 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#publications">Publications</a></li>
+                        <li><a href="#awards">Awards</a></li>
                         <li><a href="#cv">CV</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2026 Dr. Owade Kennedy Jackob. All Rights Reserved. Last updated March 2026.</p>
+                <p>&copy; 2026 Dr. Owade Kennedy Jackob. All Rights Reserved. Last updated November 2026.</p>
             </div>
         </div>
     </footer>
